@@ -1,0 +1,45 @@
+#pragma METAINFO("Macro Runner", 0, 50, "Killazer")
+#include <xb1.gph>
+#include "light_k.gph"
+#include <remapper.gph>
+/*	
+-------------------------------------------------------------------------------
+	Created 10/13/2021
+	
+	Program executes walk macro that makes character walk in circle
+*/
+
+//Program starts of in spam mode
+bool bplay=FALSE;
+bool aplay=FALSE;
+
+main{
+	set_light('W');
+	//Press L3 twice in quick succession to start macro
+	if(event_active(XB1_LS) && time_release(XB1_LS) < 250){
+        bplay=!bplay; // inverses the value FALSE<->TRUE
+    }
+    // your filename must have 8 characters or less
+    /*
+	if (bplay){
+		set_light('W');
+		macro_run("KH Macro.gmk");
+	}
+    else{
+		set_light('B');
+		macro_stop();
+	}
+	*/
+	if(event_active(XB1_RS) && time_release(XB1_RS) < 250){
+        bplay=!bplay; // inverses the value FALSE<->TRUE
+    }
+    // your filename must have 8 characters or less
+    if (bplay){
+		set_light('Y');
+		macro_run("macro.gmk");
+	}
+    else{
+		set_light('B');
+		macro_stop();
+	}
+}
