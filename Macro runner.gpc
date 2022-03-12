@@ -1,4 +1,4 @@
-#pragma METAINFO("Macro Runner", 0, 50, "Kttra")
+#pragma METAINFO("Macro Runner", 1, 05, "Kttra")
 #include <xb1.gph>
 #include "light_k.gph"
 #include <remapper.gph>
@@ -19,17 +19,7 @@ main{
 	if(event_active(XB1_LS) && time_release(XB1_LS) < 250){
         bplay=!bplay; // inverses the value FALSE<->TRUE
     }
-    // your filename must have 8 characters or less
-    /*
-	if (bplay){
-		set_light('W');
-		macro_run("KH Macro.gmk");
-	}
-    else{
-		set_light('B');
-		macro_stop();
-	}
-	*/
+
 	if(event_active(XB1_RS) && time_release(XB1_RS) < 250){
         bplay=!bplay; // inverses the value FALSE<->TRUE
     }
