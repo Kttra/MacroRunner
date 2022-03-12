@@ -1,4 +1,4 @@
-#pragma METAINFO("Macro Runner", 0, 50, "K")
+#pragma METAINFO("Macro Runner", 0, 50, "Kttra")
 #include <xb1.gph>
 #include "light_k.gph"
 #include <remapper.gph>
