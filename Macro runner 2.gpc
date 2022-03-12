@@ -1,0 +1,82 @@
+#pragma METAINFO("Macro Runner", 2, 00, "Kttra")
+#include <xb1.gph>
+#include "light_k.gph"
+#include <remapper.gph>
+/*	
+-------------------------------------------------------------------------------
+	Program made to run macros. To activate press the share button once. To
+	deactivate, press it again. If you want to switch to another macro, quickly
+	press the share button twice. Note that the macro file names can be
+	renamed in the switch cases. It is also possible to add more than two
+	macro files. Program also disables the share button from screenshotting
+	or recording on consoles.
+	
+	Created 10/13/2021
+	Program executes a macro that is in your sd card
+	
+	Update 3/11/2022
+	Changes the activation button to be the share button
+	Changed so activation only requires one press
+	Added modifier at the end of the program to disable the share button so
+	the console will not take any screenshots or videos
+	
+	Update 3/12/2022
+	Added macro switching by quickly pressing the share button twice.
+	Edited code so that it is easy to add more macros or change macro names
+*/
+
+//Program starts of in turbo mode
+bool macroRun = FALSE;
+int macroNum = 1;
+
+main{
+	char* selectedMacro;
+	
+	//Press on the share twice in quick succession to switch macros
+	//Possible to change to another button but I find it increases the chances
+	//accidental switching
+	if(event_active(BUTTON_18) && time_release(BUTTON_18) < 250){
+		macroNum++;
+    }
+	
+	//Determines what macro is selected, you can add more if you want or change
+	//the name of the macro files
+	switch(macroNum){
+	case 1:
+		selectedMacro = "macro.gmk";
+		break;
+	case 2:
+		selectedMacro = "macro2.gmk";
+		break;
+	default:
+		//Defaults back to the first macro
+		selectedMacro = "macro.gmk";
+		macroNum = 1;
+	}
+	
+	//Activates macro.gpc if you press the share button
+	if(event_active(BUTTON_18)){
+        macroRun=!macroRun; // inverses the value FALSE<->TRUE
+    }
+    //Your macro filename must have 8 characters or less
+    if (macroRun){
+		//Changes the light based on what macro is selected
+		if(macroNum == 1){
+			set_light('R');
+		}
+		else if(macroNum == 2){
+			set_light('W');
+		}
+		//Runs the macro use has selected
+		macro_run(selectedMacro);
+	}
+	//Macro is no active, set light to blue
+    else{
+		set_light('B');
+		macro_stop();
+	}
+
+	
+	//Disables share button
+	set_val(BUTTON_18, 0);
+}
