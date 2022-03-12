@@ -1,5 +1,5 @@
 # Macro Runner
- A gpc script made to run custom macros. You can create your own macro.gmk file and this script will run it. An sd card will be needed to store your gmk file. To activate the macro, switch to the profile containing this script. A custom gmk file can be made by using gtuner. There are now two versions of this script.
+ A gpc script made to run custom macros. This is a script used to run macros to complete repetitive tasks. You can create your own macro.gmk file and this script will run it. An sd card will be needed to store your gmk file. To activate the macro, switch to the profile containing this script. A custom gmk file can be made by using gtuner. There are now two versions of this script.
 
 **Version 1.0.5 (For older controllers)**
 ----------------------------------------------------------------------------------------------------------------------------
