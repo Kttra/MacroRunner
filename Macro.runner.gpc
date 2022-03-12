@@ -1,0 +1,37 @@
+#pragma METAINFO("Macro Runner", 1, 05, "Kttra")
+#include <xb1.gph>
+#include "light_k.gph"
+#include <remapper.gph>
+/*	
+-------------------------------------------------------------------------------
+	Program originally made to execute a walk macro. Edited to run any macro.gmk
+	file. To activate quickly press R3 twice. To deactivate, repeat this step.
+	Red light indicates the macro is active while blue means it has been
+	deactivated. There is a newer version of this program that utilizes the
+	share button instead and can hold more than one macro.gmk file.
+	
+	Created 10/13/2021	
+	Program executes walk macro that makes character walk in circle
+	
+	Update 3/12/2022
+	Program edited to look cleaner and to be easier to understand.
+*/
+
+//Program starts of in spam mode
+bool runMacro=FALSE;
+
+main{
+	//Press R3 twice in quick succession to start macro
+	if(event_active(XB1_RS) && time_release(XB1_RS) < 250){
+        runMacro=!runMacro; // inverses the value FALSE<->TRUE
+    }
+    //Your filename must have 8 characters or less
+    if (runMacro){
+		set_light('R');
+		macro_run("macro.gmk");
+	}
+    else{
+		set_light('B');
+		macro_stop();
+	}
+}
