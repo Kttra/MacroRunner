@@ -3,7 +3,7 @@
 
 **Version 1.0.5 (For older controllers)**
 ----------------------------------------------------------------------------------------------------------------------------
-Press R3 twice quickly to activate your macro. Repeat to deactivate.
+Press R3 twice to activate your macro. Repeat to deactivate.
 
 **Version 2.0.0 (For newer controllers)**
 ----------------------------------------------------------------------------------------------------------------------------
