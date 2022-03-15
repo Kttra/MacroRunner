@@ -12,3 +12,16 @@ Press the share button once to activate the macro. Press it quickly twice to swi
 Blue = Deactivated  
 Red = Activated, macro.gmk file  
 White = Activated, macro2.gmk file  
+
+
+**Macro Recording**
+----------------------------------------------------------------------------------------------------------------------------
+To record a macro, go to the device monitor tab. Then hit record when you are ready to start recording. There will be a 3 second countdown until the recording starts. After you are done recording, hit stop and then save the file as macro.gmk or anything else that is supported in the switch cases. When recording a macro, I suggest you consider making it so the scene is as consistent as possible. If it is not, then it is possible for the macro to not have the results you want because of character or camera positions.
+
+![alt text](https://github.com/Kttra/MacroRunner/blob/sub/macro%20recorder.png)
+
+**Macro Editting**
+----------------------------------------------------------------------------------------------------------------------------
+To edit your macro file, switch to the macro editor tab. You can highlight an area in the macro file by first clicking on a section in the waveform. Then hold shift and click on another area. The edit tools are on top of the waveform.
+
+![alt text](https://github.com/Kttra/MacroRunner/blob/sub/macro%20editor.png)
