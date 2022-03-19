@@ -16,7 +16,7 @@ White = Activated, macro2.gmk file
 
 **Macro Recording**
 ----------------------------------------------------------------------------------------------------------------------------
-To record a macro, go to the device monitor tab. Then hit "REC" on the bottom right when you are ready to start recording. There will be a 3 second countdown until the recording starts. After you are done recording, hit stop and then save the file as macro.gmk or anything else that is supported in the switch cases. When recording a macro, I suggest you consider making it so the scene is as consistent as possible. If it is not, then it is possible for the macro to not have the results you want because of different character or camera positions.
+To record a macro, go to the device monitor tab. Then hit "REC" on the bottom right when you are ready to start recording. There will be a 3 second countdown until the recording starts. After you are done recording, hit stop and then save the file as macro.gmk or anything else that is supported in the switch cases. When recording a macro, I suggest you consider making it so the scene is as consistent as possible. If it is not, then it is possible for the macro to not have the results you want because of different position or camera angles.
 
 ![alt text](https://github.com/Kttra/MacroRunner/blob/sub/macro%20recorder.png)
 
