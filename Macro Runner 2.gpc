@@ -34,14 +34,14 @@ main{
 	char* selectedMacro;
 	
 	//Press on the share twice in quick succession to switch macros
-	//Possible to change to another button but I find it increases the chances
-	//accidental switching
+	//Possible to change to another button but I find this decreases the chances
+	//of accidental switching
 	if(event_active(BUTTON_18) && time_release(BUTTON_18) < 250){
 		macroNum++;
     }
 	
-	//Determines what macro is selected, you can add more if you want or change
-	//the name of the macro files
+	//Determines what macro is selected, you can add more or change
+	//the names of the macro files if you want by adding more cases
 	switch(macroNum){
 	case 1:
 		selectedMacro = "macro.gmk";
@@ -68,10 +68,10 @@ main{
 		else if(macroNum == 2){
 			set_light('W');
 		}
-		//Runs the macro use has selected
+		//Runs the macro user has selected
 		macro_run(selectedMacro);
 	}
-	//Macro is no active, set light to blue
+	//Macro is not active, set light to blue
     else{
 		set_light('B');
 		macro_stop();
