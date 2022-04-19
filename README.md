@@ -25,3 +25,9 @@ To record a macro, go to the device monitor tab. Then hit "REC" on the bottom ri
 To edit your macro file, switch to the macro editor tab. You can highlight an area in the macro file by first clicking on a section in the waveform. Then hold shift and click on another area. The edit tools are on top of the waveform.
 
 ![alt text](https://github.com/Kttra/MacroRunner/blob/sub/macro%20editor.png)
+
+**Other Related Projects**
+----------------------------------------------------------------------------------------------------------------------------
+.[TurboMode](https://github.com/Kttra/TurboMode) - Emulate the popular turbo mode feature from many custom controllers and arcade controllers.
+.[Keyboard Remapper](https://github.com/Kttra/PPD-Keyboard-Remapper) - A project that looks into the keyboard rollover problem that plagues many laptops and keyboards and provides a solution.
+.[Stick Drift Fix](https://github.com/Kttra/Stick-Drift-Fix) - Stick drift is a prevalent problem in all types of controllers ranging from the switch to the playstation. This project prevents the controller from drifting at a software level.
